@@ -1,0 +1,50 @@
+.foodCard {
+    color: var(--fgColor-default);
+    border: 1px solid var(--button-borderColor-default);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    min-width: 250px;
+}
+
+.foodImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.foodInfo {
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.foodName {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.foodDescription {
+    margin-bottom: 5px;
+    flex-grow: 1;
+}
+
+.foodPrice {
+    font-weight: bold;
+}
+
+.categoryNameContainer {
+    /* background-color: #f0f0f0; */
+    border-radius: var(--border-radius-4);
+    border: 1px solid var(--button-borderColor-default);
+    font-weight: 400px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+    font-size: 14px;
+}

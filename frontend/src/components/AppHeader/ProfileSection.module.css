@@ -1,0 +1,39 @@
+.profileSection {
+    /* border: 1px solid black; */
+    border-radius: var(--border-radius-4);
+    display: flex;
+    align-items: center;
+    padding: 4px 12px;
+    gap: 8px;
+    /* gap: 10px; */
+    min-width: 42px;
+    width: fit-content;
+    transition: background-color 0.25s;
+}
+
+.profileSection:hover {
+    background-color: var(--grey-hover-color);
+    cursor: pointer;
+}
+
+.profileAvatar {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--borderColor-default);
+    border-radius: 16px;
+}
+
+.profileName {
+    /* margin: 0 8px; */
+    /* border: 1px solid black; */
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--black-color);
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}

@@ -1,0 +1,114 @@
+.profileHeader {
+    border: 1px solid var(--borderColor-default);
+    border-radius: var(--border-radius-4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
+    padding: 1.2em 1.2em;
+    box-sizing: border-box;
+}
+
+.profileAvatar {
+    min-height: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    border: 1px solid var(--borderColor-default);
+    /* box-sizing: border-box; */
+}
+
+.profileAvatar img {
+    border-radius: 50%;
+    min-height: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.profileCallToAction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* justify-content: center; */
+    /* border: 1px solid black; */
+    gap: 1.2em;
+    width: 100%;
+}
+
+.profileInfo {
+    /* border: 1px dotted black; */
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1em;
+    color: var(--fgColor-default);
+}
+
+.profileFollowersCount {
+    /* border: 1px dotted black; */
+    font-size: 15px;
+    color: var(--fgColor-default);
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+}
+
+.profileActions {
+    /* border: 1px dotted black; */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-items: start;
+    gap: 0.8em;
+    width: fit-content;
+}
+
+.profileActionButton {
+    /* font-size: 20px; */
+    /* font-size: calc(14px + 0.2em); */
+    /* font-size: 14px; */
+    /* display: flex;
+    align-items: center; */
+    padding: 0.4em 0.8em;
+    /* border: 0; */
+    background-color: var(--bgColor-default);
+}
+
+@media screen and (max-width: 800px) {
+    .profileHeader {
+        padding: 0.8em 0.8em;
+    }
+
+    .profileActions {
+        /* flex-direction: column; */
+        /* align-items: stretch; */
+    }
+
+    .profileActionButton span {
+        display: none;
+    }
+
+    .profileCallToAction {
+        gap: 0.8em;
+    }
+
+    .profileFollowersCount {
+        font-size: 14px;
+    }
+
+    .profileAvatar,
+    .profileAvatar img {
+        max-width: 60px;
+        max-height: 60px;
+        min-width: 60px;
+        min-height: 60px;
+    }
+
+    .profileInfo {
+        font-size: 18px;
+    }
+}

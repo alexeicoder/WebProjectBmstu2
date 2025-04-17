@@ -1,0 +1,25 @@
+svg#freepik_stories-bibliophile:not(.animated) .animable {
+    opacity: 0;
+}
+
+svg#freepik_stories-bibliophile.animated #freepik--Books--inject-2 {
+    animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) slideUp;
+    animation-delay: 0s;
+}
+
+svg#freepik_stories-bibliophile.animated #freepik--Character--inject-2 {
+    animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) slideUp;
+    animation-delay: 0s;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: inherit;
+    }
+}

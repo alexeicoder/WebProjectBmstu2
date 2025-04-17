@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  food-db:
+    image: postgres:17
+    container_name: food-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: alexei
+      POSTGRES_DB: food_service
+    ports:
+      - "3201:5432"  
+    volumes:
+      - food-db-data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - backend-network
+
+  food-service:
+    build: .
+    container_name: food-service
+    ports:
+      - "3200:3200"
+    environment:
+      DB_HOST: food-db  
+      DB_PORT: 5432     
+      DB_USER: postgres
+      DB_PASSWORD: alexei
+      DB_NAME: food_service
+      AUTH_SERVICE_URL: "http://auth-service:3000/api/auth"
+    depends_on:
+      - food-db 
+    networks:
+      - backend-network
+
+volumes:
+  food-db-data:
+
+networks:
+  backend-network:
+    external: true

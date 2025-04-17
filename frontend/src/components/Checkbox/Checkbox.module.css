@@ -1,0 +1,25 @@
+.checkboxSection {
+    /* border: 1px dotted black; */
+    display: flex;
+    gap: 10px;
+    /* margin-bottom: 20px; */
+}
+
+.checkbox {
+    margin: 0;
+    outline: none;
+}
+
+.checkbox:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.checkbox:checked {
+    /* outline: 2px solid deeppink; */
+    outline: none;
+}
+
+.checkboxTitle {
+    margin: 0;
+}

@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  order-db:
+    image: postgres:17
+    container_name: order-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: alexei
+      POSTGRES_DB: order_service
+    ports:
+      - "3101:5432"
+    volumes:
+      - order-db-data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - backend-network
+
+  order-service:
+    build: .
+    container_name: order-service
+    ports:
+      - "3100:3100"
+    environment:
+      DB_HOST: order-db
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: alexei
+      DB_NAME: order_service
+      AUTH_SERVICE_URL: "http://auth-service:3000/api/auth"
+      FOOD_SERVICE_URL: "http://food-service:3200/api/food"
+    depends_on:
+      - order-db 
+    networks:
+      - backend-network
+
+volumes:
+  order-db-data:
+
+networks:
+  backend-network:
+    external: true

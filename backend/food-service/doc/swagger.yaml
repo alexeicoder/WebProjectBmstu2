@@ -1,0 +1,199 @@
+openapi: 3.0.0
+info:
+  title: Food Service API
+  version: v1
+  description: API for managing food items and categories.
+
+paths:
+  /:
+    get:
+      summary: Welcome message
+      description: Returns a welcome message for the Food Service API.
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Welcome to Food Service API
+
+  /api/food/find/all:
+    get:
+      summary: Get all food items
+      description: Retrieves a list of all food items.
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                    description: The total number of food items.
+                  foodItems:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/FoodItem'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/food/find/category/all:
+    get:
+      summary: Get all food categories
+      description: Retrieves a list of all food categories.
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  foodCategories:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/FoodCategory'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/food/find/id/{id}:
+    get:
+      summary: Find food item by ID
+      description: Retrieves a food item by its ID.
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: ID of the food item to retrieve
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FoodItem'
+        '400':
+          description: Bad request (e.g., invalid ID)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Food item not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/food/find/name/{name}:
+    get:
+      summary: Find food item by name
+      description: Retrieves a food item by its name.
+      parameters:
+        - in: path
+          name: name
+          schema:
+            type: string
+          required: true
+          description: Name of the food item to retrieve
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FoodItem'
+        '400':
+          description: Bad request (e.g., invalid name)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Food item not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    FoodItem:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique identifier for the food item.
+        name:
+          type: string
+          description: Name of the food item.
+        count:
+          type: integer
+          description: Count of the food item.
+        price:
+          type: number
+          description: Price of the food item.
+        description:
+          type: string
+          description: Description of the food item.
+        img:
+          type: string
+          description: URL of the food item image.
+        id_category:
+          type: integer
+          description: ID of the category the food item belongs to.
+        category_name:
+          type: string
+          description: Name of the category the food item belongs to.
+      required:
+        - id
+        - name
+        - count
+        - price
+        - description
+        - img
+        - id_category
+        - category_name
+    FoodCategory:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique identifier for the food category.
+        name:
+          type: string
+          description: Name of the food category.
+      required:
+        - id
+        - name
+    ErrorResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Error message.

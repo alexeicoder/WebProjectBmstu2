@@ -1,0 +1,94 @@
+/* ModalMessage.module.css */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Ensure it's on top */
+}
+
+.modalContent {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.block_message {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.icon {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.message {
+    flex-grow: 1;
+    color: var(--fgColor-default);
+}
+
+.close {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.error_container {
+    border: 1px solid var(--borderColor-danger-muted);
+    background-color: var(--bgColor-danger-muted);
+}
+
+.error_close {
+    color: #721c24;
+}
+
+.warning_container {
+    border: 1px solid var(--borderColor-warning-muted);
+    background-color: var(--bgColor-warning-muted);
+}
+
+.warning_close {
+    color: #856404;
+}
+
+.success_container {
+    border: 1px solid var(--borderColor-success-muted);
+    background-color: var(--bgColor-success-muted);
+}
+
+.success_close {
+    color: #155724;
+}
+
+.default {
+    border: 1px solid var(--borderColor-success-muted);
+    background-color: var(--bgColor-success-muted);
+}
+
+.default_close {
+    color: var(--borderColor-success-muted);
+}

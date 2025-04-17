@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  auth-db:
+    image: postgres:17
+    container_name: auth-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: alexei
+      POSTGRES_DB: user_service
+    ports:
+      - "3001:5432"
+    volumes:
+      - auth-db-data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - backend-network
+
+  auth-service:
+    build: .
+    container_name: auth-service
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: auth-db
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: alexei
+      DB_NAME: user_service
+    depends_on:
+      - auth-db
+    networks:
+      - backend-network
+
+volumes:
+  auth-db-data:
+
+networks:
+  backend-network:
+    external: true

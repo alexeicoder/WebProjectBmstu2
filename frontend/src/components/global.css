@@ -1,0 +1,151 @@
+:root {
+    /* colors */
+    /* --primary-color: #4264FD; */
+    --primary-color: #0969DA;
+    /* --primary-color: #06382C; */
+    /* --bgColor-default: #F0EEE2; */
+
+    /*  fgColor */
+    --fgColor-default: #25292E;
+    --fgColor-warning: #9a6700;
+
+    --fgColor-disabled: #818b98;
+
+    /* bgColor */
+    --bgColor-default: #fafafa;
+    --bgColor-muted: #f6f8fa;
+    --bgColor-focus: #f5f5f5;
+    --bgColor-disabled: #eff2f5;
+
+    --bgColor-danger-muted: #ffebe9;
+    --bgColor-danger-focus: #cf222e;
+    --bgColor-warning-muted: #fff8c5;
+    --bgColor-success-muted: #dafbe1;
+
+    /* focus */
+    --focus-outlineColor: #0969DA;
+
+    /* textColor */
+    /* --fgColor-default: #25292E; */
+    /* --fgColor-default: #1F2328; */
+
+    /* button-bgColor */
+    --button-bgColor-default: var(--control-bgColor-default);
+    --button-bgColor-disabled: var(--control-bgColor-disabled);
+    --button-bgColor-hover: var(--control-bgColor-hover);
+    --button-bgColor-active: var(--control-bgColor-active);
+
+    /* button-borderColor */
+    --button-borderColor-default: var(--control-borderColor-default);
+    --button-borderColor-active: var(--control-borderColor-active);
+
+    /* button-textColor */
+    --button-textColor-default: var(--control-textColor-default);
+
+    /* borderColor */
+    --borderColor-default: var(--control-borderColor-default);
+    --borderColor-disabled: var(--control-borderColor-disabled);
+    --borderColor-danger-muted: var(--control-borderColor-danger-muted);
+    --borderColor-warning-muted: var(--control-borderColor-warning-muted);
+    --borderColor-success-muted: var(--control-borderColor-success-muted);
+
+    /* control-bgColor */
+    --control-bgColor-default: #f6f8fa;
+    --control-bgColor-disabled: #eff2f5;
+    --control-bgColor-hover: #eff2f5;
+    --control-bgColor-active: #e6eaef;
+
+    /* control-borderColor */
+    --control-borderColor-default: #d1d9e0;
+    --control-borderColor-active: #d1d9e0;
+
+    --control-borderColor-disabled: #818b981a;
+
+    --control-borderColor-danger-muted: #ff818266;
+    --control-borderColor-warning-muted: #d4a72c66;
+    --control-borderColor-success-muted: #1f883d;
+
+    /* control-textColor */
+    --control-textColor-default: #25292E;
+
+    --contour-color: #A6A6A6;
+    --white-color: #FDFCF7;
+    --darktheme-white-color: #f0f6fc;
+    /* --black-color: #272935; */
+    --black-color: #262626;
+    --blackish-color: #747474;
+    --star-full-color: #E87400;
+    --star-empty-color: #A6A6A6;
+    ---hover-color: #EBEBEB;
+    --grey-hover-color: #E0DFD3;
+
+    /* width & heights */
+    --sidebar-full-width: 250px;
+    --sidebar-padding: 10px;
+    --sidebar-expanded-width: calc(var(--option-expanded-width) + var(--sidebar-padding) + var(--sidebar-padding));
+    --option-picture-width: 25px;
+    --option-picture-height: var(--option-picture-width);
+    --option-expanded-width: var(--option-picture-width);
+
+    --avatar-small-height: 32px;
+    --avatar-small-width: var(--avatar-small-height);
+
+    --avatar-medium-height: 48px;
+    --avatar-medium-width: var(--avatar-medium-height);
+
+    --border-radius-4: 4px;
+    --border-radius-6: 6px;
+    --border-radius-8: 8px;
+    --border-radius-18: 18px;
+    --border-radius-50: 50px;
+
+    --cover-height: 320px;
+    --cover-width: 220px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #4493F8;
+
+        /*  fgColor */
+        --fgColor-warning: #d29922;
+        --fgColor-disabled: #656c7699;
+
+        /* bgColor */
+        /* --bgColor-default: #0D1117; */
+        --bgColor-default: #171717;
+        --bgColor-disabled: #212830;
+        --bgColor-muted: #262626;
+        --bgColor-focus: #171717;
+
+        --bgColor-danger-muted: #25171C;
+        --bgColor-warning-muted: #29200F;
+        --bgColor-success-muted: #0E2414;
+
+        /* borderColor */
+        --borderColor-default: #3d444d;
+
+        /* textColor */
+        --fgColor-default: #fafafa;
+
+        /* focus */
+        --focus-outlineColor: #4493F8;
+
+        /* control */
+
+        --control-bgColor-default: #262626;
+        --control-bgColor-disabled: #212830;
+        --control-bgColor-hover: #262c38;
+        --control-bgColor-active: #2a313c;
+
+        --control-borderColor-default: #3d444d;
+        --control-borderColor-disabled: #656c761a;
+        --control-borderColor-active: #3d444d;
+
+        --control-borderColor-danger-muted: #792E2E;
+        --control-borderColor-warning-muted: #9a6700;
+        --control-borderColor-success-muted: #32731F;
+
+        --control-textColor-default: #fafafa;
+    }
+}

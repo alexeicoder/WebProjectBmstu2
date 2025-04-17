@@ -1,0 +1,44 @@
+/* AddToCart.module.css */
+.addToCart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantityControl {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* .quantityControl button {
+    padding: 5px 10px;
+    border: 1px solid var(--button-borderColor-default);
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--fgColor-default);
+} */
+
+/* .quantityControl button:disabled {
+    opacity: 0.5;
+    cursor: default;
+} */
+
+.addToCartButton {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}

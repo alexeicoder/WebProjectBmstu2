@@ -1,0 +1,13 @@
+.pageLayout {
+    /* border: 3px solid red; */
+    height: calc(100vh - 32px);
+    margin: 0px 120px;
+    /* margin-left: 170px; */
+    padding: 64px 16px;
+}
+
+@media screen and (max-width: 800px) {
+    .pageLayout {
+        margin: 0;
+    }
+}

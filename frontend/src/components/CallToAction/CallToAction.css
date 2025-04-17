@@ -1,0 +1,14 @@
+.callToAction {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    /* border: 1px solid red; */
+    gap: 20px;
+    /* justify-content: center; */
+}
+
+.callToAction_right {
+    margin-top: 0;
+    /* justify-content: space-between; */
+}

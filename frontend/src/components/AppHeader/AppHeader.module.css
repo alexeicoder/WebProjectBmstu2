@@ -1,0 +1,56 @@
+.appHeader {
+    border-bottom: 1px solid var(--borderColor-default);
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: var(--bgColor-muted);
+    height: 64px;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    /* gap: 20px; */
+    /* padding: 0 64px; */
+}
+
+.appHeaderLogo {
+    /* border: 1px solid black; */
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/pizza.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    margin-left: 120px;
+}
+
+.appHeaderOptionsBlock {
+    margin-left: 40px;
+    display: flex;
+    /* background-color: red; */
+    /* border: 1px solid black; */
+    gap: 20px;
+}
+
+.appHeaderOptionsBlock a {
+    text-decoration: none;
+}
+
+.appHeaderOption {
+    padding: 0.4em 0.8em;
+    font-size: 14px;
+    /* line-height: 1em; */
+    color: var(--fgColor-default);
+    cursor: pointer;
+    /* border: 1px solid var(--borderColor-default); */
+    border-radius: var(--border-radius-4);
+
+}
+
+.appHeaderOption:hover {
+    background-color: var(--button-bgColor-hover);
+}

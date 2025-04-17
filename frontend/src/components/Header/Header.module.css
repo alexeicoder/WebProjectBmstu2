@@ -1,0 +1,23 @@
+.header {
+    border-bottom: 1px solid var(--borderColor-default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgColor-muted);
+    height: 64px;
+    box-sizing: border-box;
+}
+
+.headerLogo {
+    /* border: 1px solid black; */
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/pizza.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}

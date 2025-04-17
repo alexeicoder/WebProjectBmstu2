@@ -1,0 +1,18 @@
+/* HomePage.module.css */
+
+.categoryButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    position: fixed;
+    left: 20px;
+    top: 64px;
+}
+
+.foodGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}

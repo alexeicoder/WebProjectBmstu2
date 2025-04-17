@@ -1,0 +1,23 @@
+1 - auth-service:
+	APP_PORT=3000
+	APP_HOST=localhost
+	DB_NAME=user_service
+
+2 - order-service:
+	APP_PORT=3100
+	APP_HOST=localhost
+	DB_NAME=order_service
+
+3 - food-service:
+	APP_PORT=3200
+	APP_HOST=localhost
+	DB_NAME=food_service
+
+1. в food-service
+1 таблица: food_items (id, name, count, price, description, img, id_category)
+2 таблица: food_categories (id, name)
+
+2. в order-service
+1 таблица: orders (id, user_id, update_date, total_amount, status, created_date)
+2 таблица: order_items (id, id_order, id_food_item)
+
